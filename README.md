@@ -141,7 +141,7 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
 
 
 ## Support Badge
-If you find this standard or the example helpful, consider kindly include the following badge close to your content: 
+If you find this standard or the example helpful, consider kindly include the following badge close to your content. This badge is available in the [badge folder](/badge/).
 
 ![Edu-Md Badge](/badge/Edu-Md-badge.svg)
 
