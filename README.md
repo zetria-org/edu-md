@@ -139,6 +139,60 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
    .translation{}
    ```
 
+## Meta-Syntax
+The above format deals with single documents. However, sometimes educational content exists in the form of a book or a course. In this case, what was originally multiple documents can be combined into a single one.  
+  
+For example, the contents of the book *Introduction to Chemistry and Biology* might look like:
+```
+Chemistry
+  |-Atoms and Molecules
+    |-Atoms
+    |-Molecules
+  |-Chemical Reactions
+    |-What is Chemical Reactions?
+    |-Reaction Speed
+Biology
+  |-What is Biology?
+    |-Life
+  ...
+```
+  
+Originally, each chapter in this book requires one document to store. Edu-Md provides a way to combine them into one document, with support of two levels of outlines: `subject` and `section`. Simply use the following format to notate such outline:
+
+### Syntax for Subject
+Replace `{subjectName}` (including curly brackets) with the name of the subject: 
+```
+!-- subject [{subjectName}]
+```
+
+### Syntax for Section
+Replace `{sectionName}` (including curly brackets) with the name of the section: 
+```
+!-- section [{sectionName}]
+```
+
+### Defining Chapter Names
+Replace `{chapterName}` (including curly brackets) with the name of the chapter:
+```
+!-- chapter [{chapterName}]
+``` 
+
+### Example Book 
+The book *Introduction to Chemistry and Biology* described above might result in an Edu-Md document that looks like this: 
+```
+!-- subject [Chemistry]
+!-- section [Atoms and Molecules]
+!-- chapter [Atoms]
+
+# This is the title
+## basically normal Edu-Md content 
+
+!-- chapter [Molecules]
+
+# Here comes the next chapter
+Simple enough, huh? 
+```
+
 
 ## Support Badge
 If you find this standard or the example helpful, consider kindly include the following badge close to your content. This badge is available in the [badge folder](/badge/).
