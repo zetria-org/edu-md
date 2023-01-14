@@ -74,8 +74,8 @@ text here
 
 ## For Developers  
 The JavaScript example to render Edu-Md content is provided here. We do, however, encourage contributions in other languages. 
-### If you're an web developer: 
-1. We suggest using  to render the markdown content. Import the packages: 
+### If you're a web developer: 
+1. We suggest using [Markdown-it](https://github.com/markdown-it/markdown-it), [Markdown-it-container](https://github.com/markdown-it/markdown-it-container), [Markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex) to render the markdown content. Import the packages: 
   
    ```js
     import MarkdownIt from 'markdown-it';
@@ -88,6 +88,7 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
         const parser = MarkdownIt({
             breaks: true,
             typographer: true,
+            // See all settings in markdown-it doc
         })
         .use(markdownItKatex)
         .use(MarkdownItContainer, 'classname', {
@@ -109,7 +110,7 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
                             break;
                     }
                     return returnString;
-                } else  {
+                } else {
                     return '</div>\n';
                 }
             }
@@ -119,13 +120,18 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
    ```
 2. Remember to implement styles for the following CSS classes, scoped to your content: 
   
-   ```
-
+   ```css
+   .youtube{}
+   .desmos{}
+   .keyword{}
+   .suggestion{}
+   .attribution{}
+   .translation{}
    ```
 
 
 ## Support Badge
-
+If you find this standard or the example helpful, consider kindly include the following badge close to your contnet: 
 
 ## Contribute  
 The current Edu-Md format is explained above, but there are still many types of multimedia content that can be valuable to educational content. Contribute to this format by opening new branches and committing to them.  
