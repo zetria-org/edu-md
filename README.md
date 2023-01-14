@@ -118,6 +118,16 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
         return parser.render(content);
     }
    ```
+   You can implement `getYouTubeComponentString()` and `getDesmosComponentString()` easily: 
+   ```js
+   function getYouTubeComponentString(videoId){
+      return `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" />`;
+   }
+   function getDesmosComponentString(graphId){
+      return `<iframe src="https://www.desmos.com/calculator/${graphId}?embed" />`;
+   }
+   ```
+   If you are using frameworks like React and want more control, these functions could be harder to implement. You might want to look into [`ReactDomServer.renderToString`](https://reactjs.org/docs/react-dom-server.html#rendertostring). 
 2. Remember to implement styles for the following CSS classes, scoped to your content: 
   
    ```css
@@ -132,6 +142,8 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
 
 ## Support Badge
 If you find this standard or the example helpful, consider kindly include the following badge close to your contnet: 
+
+![Edu-Md Badge](/badge/Edu-Md-badge.svg)
 
 ## Contribute  
 The current Edu-Md format is explained above, but there are still many types of multimedia content that can be valuable to educational content. Contribute to this format by opening new branches and committing to them.  

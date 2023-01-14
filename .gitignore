@@ -10,3 +10,7 @@ media
 # Virtual environments
 .venv 
 venv 
+
+# Other files 
+.ai
+*.ai

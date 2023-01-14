@@ -37,3 +37,10 @@ function parseMarkdown(content){
     });
     return parser.render(content);
 }
+// Randering embedded content
+function getYouTubeComponentString(videoId){
+   return `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" />`;
+}
+function getDesmosComponentString(graphId){
+   return `<iframe src="https://www.desmos.com/calculator/${graphId}?embed" />`;
+}
