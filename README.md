@@ -77,13 +77,13 @@ The JavaScript example to render Edu-Md content is provided here. We do, however
 ### If you're an web developer: 
 1. We suggest using  to render the markdown content. Import the packages: 
   
-   ```{js}
+   ```js
     import MarkdownIt from 'markdown-it';
     import MarkdownItContainer from 'markdown-it-container';
     import markdownItKatex from 'markdown-it-katex';
    ```
    This function, `parseMarkdown` takes in Edu-Md content and returns a formatted string of HTML: 
-   ```{js}
+   ```js
    function parseMarkdown(content){
         const parser = MarkdownIt({
             breaks: true,
