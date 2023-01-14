@@ -1,0 +1,12 @@
+### File system
+.DS_Store
+desktop.ini
+
+## Editor
+.vscode
+*.log
+media
+
+# Virtual environments
+.venv 
+venv 
